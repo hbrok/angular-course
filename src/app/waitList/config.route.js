@@ -12,15 +12,13 @@
             templateUrl: 'app/waitList/waitList.html',
             controller: 'WaitListController',
             controllerAs: 'vm',
-            // Controller will only load if the resovle promise is successful
-            // and resolves. Promise will give us logged in user.
             resolve: { user: resolveUser }
         });
 
         resolveUser.$inject = ['authService'];
 
         function resolveUser(authService) {
-          return authService.firebaseAuthObject.$requireAuth();
+            return authService.firebaseAuthObject.$requireAuth();
         }
     }
 })();
