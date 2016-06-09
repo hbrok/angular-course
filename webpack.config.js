@@ -86,7 +86,19 @@ module.exports = function makeWebpackConfig () {
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
       loader: 'babel',
-      exclude: /node_modules/
+      // exclude: /node_modules/
+    }, {
+      // SASS LOADER
+      // Reference: https://github.com/jtangelder/sass-loader
+      // Allow compiling sass thorugh js??
+      //
+      // Reference: https://github.com/postcss/postcss-loader
+      // Postprocess your css with PostCSS plugins
+      test: /\.scss$/,
+      loaders: ["style", "css", "sass"]
+    },
+    sassLoader: {
+      includePaths: [path.resolve(__dirname, "./node_modules/materialize-css/sass")]
     }, {
       // CSS LOADER
       // Reference: https://github.com/webpack/css-loader

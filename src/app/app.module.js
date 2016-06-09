@@ -13,12 +13,14 @@
 (function () {
     'use strict';
 
+    // Styles
+    require('./sass/app.scss');
+    require('materialize-css/sass/materialize.scss');
+
+    // Angular
     var angular = require('angular');
     var ngRoute = require('angular-route');
     var Firebase = require('firebase');
-    // require('firebase/auth');
-    // require('firebase/database');
-    // require('firebase/storage');
     var angularfire = require('angularfire');
 
     // Core
