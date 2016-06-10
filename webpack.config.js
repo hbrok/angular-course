@@ -21,7 +21,11 @@ module.exports = function makeWebpackConfig () {
    * Reference: http://webpack.github.io/docs/configuration.html
    * This is the object where all configuration gets set
    */
-  var config = {};
+  var config = {
+    sassLoader: {
+      // includePaths: [path.resolve(__dirname, "./node_modules/materialize-css/sass")]
+    }
+  };
 
   /**
    * Entry
@@ -86,7 +90,7 @@ module.exports = function makeWebpackConfig () {
       // Compiles ES6 and ES7 into ES5 code
       test: /\.js$/,
       loader: 'babel',
-      // exclude: /node_modules/
+      exclude: /node_modules/
     }, {
       // SASS LOADER
       // Reference: https://github.com/jtangelder/sass-loader
@@ -96,9 +100,6 @@ module.exports = function makeWebpackConfig () {
       // Postprocess your css with PostCSS plugins
       test: /\.scss$/,
       loaders: ["style", "css", "sass"]
-    },
-    sassLoader: {
-      includePaths: [path.resolve(__dirname, "./node_modules/materialize-css/sass")]
     }, {
       // CSS LOADER
       // Reference: https://github.com/webpack/css-loader
