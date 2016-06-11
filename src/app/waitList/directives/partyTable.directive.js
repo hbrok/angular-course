@@ -1,10 +1,10 @@
 (function() {
     'use strict';
-    
+
     angular
         .module('app.waitList')
         .directive('hbPartyTable', hbPartyTable);
-    
+
     function hbPartyTable() {
         return {
             templateUrl: 'app/waitList/directives/partyTable.html',
@@ -17,16 +17,16 @@
             }
         };
     }
-    
-    PartyTableController.$inject = ['textMessageService']
-    
+
+    PartyTableController.$inject = ['textMessageService'];
+
     function PartyTableController(textMessageService) {
         var vm = this;
-        
+
         vm.removeParty = removeParty;
         vm.sendTextMessage = sendTextMessage;
         vm.toggleDone = toggleDone;
-        
+
         function removeParty(party) {
             vm.parties.$remove(party);
         }

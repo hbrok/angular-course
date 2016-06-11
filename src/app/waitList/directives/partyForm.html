@@ -1,21 +1,20 @@
-
-<div class="row">
+<div class="row center-align">
   <form class="col s12 party-form" ng-submit="vm.addParty()">
     <div class="row">
-      <div class="input-field col s3">
+      <div class="input-field col s12 l3">
           <input ng-model="vm.newParty.name" type="text" class="form-control" placeholder="Name" required>
       </div>
 
-      <div class="input-field col s3">
+      <div class="input-field col s12 l3">
           <input ng-model="vm.newParty.phone" type="text" class="form-control" placeholder="Phone" required>
       </div>
 
-      <div class="input-field col s3">
+      <div class="input-field col s12 l3">
           <input ng-model="vm.newParty.size" type="number" class="form-control" placeholder="Size of party" required>
       </div>
 
-      <div class="col s3">
-        <button type="submit" class="btn btn-primary">Add Party</button>
+      <div class="input-field col s3">
+        <button type="submit" class="btn btn-large">Add Party</button>
       </div>
     </div>
   </form>

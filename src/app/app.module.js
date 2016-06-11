@@ -1,25 +1,15 @@
-// import angular from 'angular';
-// import ngRoute from 'angular-route';
-// import firebase from 'firebase';
-
-//
-// export default FirebaseAdapter.extend({
-//   firebase: new Firebase(config.firebase)
-// });
-
-// import '../style/app.css';
-
-// IIFE, best practice as per johnpapa styleguide
 (function () {
     'use strict';
 
     // Styles
     require('./sass/app.scss');
     require('materialize-css/sass/materialize.scss');
+    // require('angular-material');
 
     // Angular
     var angular = require('angular');
     var ngRoute = require('angular-route');
+    var ngAnimate = require('angular-animate');
     var Firebase = require('firebase');
     var angularfire = require('angularfire');
 
@@ -56,6 +46,7 @@
         .module('app', [
             // Angular modules.
             'ngRoute',
+            'ngAnimate',
 
             // Third party modules.
             'firebase',
@@ -86,10 +77,7 @@
             if (error === 'AUTH_REQUIRED') {
                 $location.path('/');
             }
-        })
+        });
     }
 
 })();
-
-// Folders-by-Feature structure
-// Folders per features they represent.

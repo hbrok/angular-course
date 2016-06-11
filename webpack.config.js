@@ -10,7 +10,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 /**
  * Env
  * Get npm lifecycle event to identify the environment
- */
+ */ 
 var ENV = process.env.npm_lifecycle_event;
 var isTest = ENV === 'test' || ENV === 'test-watch';
 var isProd = ENV === 'build';
@@ -22,9 +22,9 @@ module.exports = function makeWebpackConfig () {
    * This is the object where all configuration gets set
    */
   var config = {
-    sassLoader: {
+    // sassLoader: {
       // includePaths: [path.resolve(__dirname, "./node_modules/materialize-css/sass")]
-    }
+    // }
   };
 
   /**
