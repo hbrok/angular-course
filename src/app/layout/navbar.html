@@ -1,21 +1,11 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">Wait and Eat</a>
-        </div>
-        
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li ng-hide="vm.isLoggedIn()"><a href="#/login">Log in</a></li>
-                <li ng-show="vm.isLoggedIn()"><a href="" ng-click="vm.logout()">Log out</a></li>
-            </ul>
-        </div>
-    </div>
+<nav>
+  <div class="nav-wrapper container">
+    <a href="#/" class="brand-logo">Wait and Eat</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li ng-show="vm.isLoggedIn()"><a href="#/waitlist">Wait List</a></li>
+      <li ng-show="vm.isLoggedIn()"><a href="" ng-click="vm.logout()">Log Out</a></li>
+      <li ng-hide="vm.isLoggedIn()"><a href="#/login">Log In</a></li>
+      <li ng-hide="vm.isLoggedIn()"><a href="#/register">Sign Up</a></li>
+    </ul>
+  </div>
 </nav>

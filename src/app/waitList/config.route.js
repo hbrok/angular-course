@@ -12,7 +12,9 @@
             templateUrl: 'app/waitList/waitList.html',
             controller: 'WaitListController',
             controllerAs: 'vm',
-            resolve: { user: resolveUser }
+            resolve: {
+                user: resolveUser
+            }
         });
 
         resolveUser.$inject = ['authService'];

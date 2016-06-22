@@ -1,10 +1,10 @@
 (function() {
     'user strict';
-    
+
     angular
         .module('app.auth')
         .directive('hbAuthForm', hbAuthForm);
-    
+
     function hbAuthForm() {
         return {
             templateUrl: 'app/auth/directives/authForm.html',
@@ -19,13 +19,13 @@
             }
         };
     }
-    
+
     function AuthFormController() {
         var vm = this;
-        
+
         vm.user = {
             email: '',
             password: ''
-        }
+        };
     }
 })();

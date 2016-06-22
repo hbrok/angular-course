@@ -1,27 +1,48 @@
+<div class="row">
+  <form name="authForm" ng-submit="authForm.$valid && vm.submitAction({ user: vm.user })" class="col s6" novalidate>
+    <!-- Errors -->
+    <div class="row">
+      <div class="col s12">
+        <h2 class="form-signin-heading" ng-bind="vm.formTitle"></h2>
+        <p ng-show="vm.error" class="text-danger" ng-bind="vm.error"></p>
+      </div>
+    </div>
 
-<form name="authForm" ng-submit="authForm.$valid && vm.submitAction({ user: vm.user })" clss="form-signin" novalidate>
-   
-    <h2 class="form-signin-heading" ng-bind="vm.formTitle"></h2>
-    
-    <!--  Server authentication error.  -->
-    <p ng-show="vm.error" class="text-danger" ng-bind="vm.error"></p>
-    
-    <!--  Email input.  -->
-    <input ng-model="vm.user.email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 1000, 'blur': 0 } }" type="email" name="email" class="form-control" placeholder="Email Address" required autofocus>
-    
-    <!--  Email error.  -->
-    <div ng-show="authForm.$submitted">
-        <p ng-show="authForm.email.$error.required" class="text-danger">Email required.</p>
-        <p ng-show="authForm.email.$error.email" class="text-danger">Please enter a valid email.</p>
+    <!-- Email -->
+    <div class="row">
+      <div class="input-field col s12">
+        <!--  Email input.  -->
+        <input ng-model="vm.user.email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 1000, 'blur': 0 } }" type="email" name="email" class="validate" placeholder="Email Address" required autofocus>
+
+        <!--  Email error.  -->
+        <div ng-show="authForm.$submitted">
+            <p ng-show="authForm.email.$error.required" class="text-danger">Email required.</p>
+            <p ng-show="authForm.email.$error.email" class="text-danger">Please enter a valid email.</p>
+        </div>
+      </div>
     </div>
-    
-    <!--  Password input.  -->
-    <input ng-model="vm.user.password" type="password" name="password" class="form-control" placeholder="Password" required>
-    
-    <!--  Password error.  -->
-    <div ng-show="authForm.$submitted">
-        <p ng-show="authForm.password.$error.required" class="text-danger">Password required.</p>
+
+    <!-- Password -->
+    <div class="row">
+      <div class="input-field col s12">
+        <!--  Password input.  -->
+        <input ng-model="vm.user.password" type="password" name="password" class="validate" placeholder="Password" required>
+
+        <!--  Password error.  -->
+        <div ng-show="authForm.$submitted">
+            <p ng-show="authForm.password.$error.required" class="text-danger">Password required.</p>
+        </div>
+      </div>
     </div>
-    
-    <button type="submit" class="btn btn-lg btn-primary btn-block" ng-bind="vm.formTitle"></button>
-</form>
+
+    <!-- submit -->
+    <div class="row">
+      <div class="col s12">
+        <button class="btn waves-effect waves-light" type="submit" name="action" ng-bind="vm.formTitle">
+          Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

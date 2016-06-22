@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.party-form .btn {
+    height: 48px;
+    line-height: 48px;
+}
+
+.text-danger {
+    color: color('red', 'base');
+}
+
+table {
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+tr {
+    transition: all .3s ease;
+}
+
+tr.done {
+    opacity: .3;
+}
+
+tr.ng-enter,
+tr.ng-leave {
+  transition: all .4s ease;
+}
+
+tr.ng-enter {
+  transform: translateX(-6em);
+}
+tr.ng-enter.ng-enter-active {
+  transform: translateX(0);
+}
+
+tr.ng-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+tr.ng-leave.ng-leave-active {
+  opacity: 0;
+  transform: translateX(6em);
+}

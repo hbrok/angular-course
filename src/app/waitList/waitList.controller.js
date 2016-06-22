@@ -11,7 +11,6 @@
 
     function WaitListController(partyService, user) {
         var vm = this;
-
         vm.parties = partyService.getPartiesByUser(user.uid);
     }
 })();
