@@ -3,6 +3,6 @@
 
     angular
         .module('app.core')
-        .constant('FIREBASE_URL', 'https://waitlistcourse.firebaseio.com/');
+        .constant('API_KEY', 'AIzaSyAEzMXkNjogXNEdmDvhwg-omdKwHOq7kZE');
 
 })();
