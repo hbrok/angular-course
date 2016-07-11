@@ -7,7 +7,7 @@
 
     function hbAuthForm() {
         return {
-            templateUrl: 'app/auth/directives/authForm.html',
+            template: require('./authForm.html'),
             restrict: 'E',
             controller: AuthFormController,
             controllerAs: 'vm',

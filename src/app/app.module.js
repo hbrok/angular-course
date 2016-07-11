@@ -25,7 +25,7 @@
     require('./auth/config.route.js');
     require('./auth/auth.controller.js');
     require('./auth/auth.service.js');
-    var authForm = require('./auth/directives/authForm.directive.js');
+    require('./auth/directives/authForm.directive.js');
 
     // Landing
     require('./landing/landing.module.js');

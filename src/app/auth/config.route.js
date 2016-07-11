@@ -9,13 +9,13 @@
 
     function configFunction($routeProvider) {
         $routeProvider.when('/register', {
-            templateUrl: 'app/auth/register.html',
+            template: require('./register.html'),
             controller: 'AuthController',
             controllerAs: 'vm'
         });
 
         $routeProvider.when('/login', {
-            templateUrl: 'app/auth/login.html',
+            template: require('./login.html'),
             controller: 'AuthController',
             controllerAs: 'vm'
         });

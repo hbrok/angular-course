@@ -11,7 +11,7 @@
 
     function configFunction($routerProvider) {
         $routerProvider.when('/', {
-            templateUrl: 'app/landing/landing.html'
+            template: require('./landing.html')
         });
     }
 

@@ -8,7 +8,7 @@
     // Facotry Function -- function that returns an object
     function hbPartyForm() {
         return {
-            templateUrl: 'app/waitList/directives/partyForm.html',
+            template: require('./partyForm.html'),
             restrict: 'E',
             controller: PartyFormController,
             controllerAs: 'vm',

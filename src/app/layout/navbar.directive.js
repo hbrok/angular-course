@@ -8,7 +8,7 @@
     function weNavbar() {
         // Returns directive definition object.
         return {
-            templateUrl: 'app/layout/navbar.html',
+            template: require('./navbar.html'),
             restrict: 'E',
             scope: {},
             controller: NavbarController,

@@ -7,7 +7,7 @@
 
     function hbPartyTable() {
         return {
-            templateUrl: 'app/waitList/directives/partyTable.html',
+            template: require('./partyTable.html'),
             restrict: 'E',
             controller: PartyTableController,
             controllerAs: 'vm',
