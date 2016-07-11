@@ -10,9 +10,9 @@
     function firebaseDataService(API_KEY) {
         var config = {
             apiKey: API_KEY,
-            authDomain: "waitlistcourse.firebaseapp.com",
-            databaseURL: "https://waitlistcourse.firebaseio.com",
-            storageBucket: "waitlistcourse.appspot.com",
+            authDomain: 'waitlistcourse.firebaseapp.com',
+            databaseURL: 'https://waitlistcourse.firebaseio.com',
+            storageBucket: 'waitlistcourse.appspot.com',
         };
         firebase.initializeApp(config);
 
