@@ -24,7 +24,7 @@
         ///////////////
 
         function register(user) {
-            return firebaseAuthObject.$createUser(user.email, user.password);
+            return firebaseAuthObject.$createUserWithEmailAndPassword(user.email, user.password);
         }
 
         function login(user) {
